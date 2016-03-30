@@ -1,0 +1,11 @@
+
+public class ConsultantHours extends Saleable {
+	
+	int hourPrice;
+	
+	public ConsultantHours(){
+		super();
+	}
+	public int getAmount(){
+		return getAmount * hourPrice;}
+}

@@ -1,0 +1,14 @@
+
+public class SalesNote {
+	String date;
+	String description;
+	int amount;
+	
+	public void SalesNote(){}
+	public String toString(){
+		String res = date + ", " + description + ", " + amount; 
+		return res;
+	}
+	
+	
+}

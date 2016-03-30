@@ -1,0 +1,29 @@
+import java.awt.BorderLayout;
+
+import javax.swing.*;
+
+public class MaFrame extends JFrame {
+
+	JButton northButton = new JButton("North");
+	JButton centerButton = new JButton("Center");
+	JButton westButton = new JButton("West");
+	JButton eastButton = new JButton("East");
+	JButton southButton = new JButton("South");
+	
+	public MaFrame(){
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		add(northButton, BorderLayout.NORTH);
+		add(centerButton, BorderLayout.CENTER);
+		add(westButton, BorderLayout.WEST);
+		add(eastButton, BorderLayout.EAST);
+		add(southButton, BorderLayout.SOUTH);
+	}
+	
+
+	public static void main(String[] args) {
+		JFrame maFrame = new JFrame();
+		maFrame.setVisible(true);
+	}
+
+}

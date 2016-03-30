@@ -1,0 +1,52 @@
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+public class InteractionDB {
+
+	String url;
+	String username;
+	String password;
+	Connection connection;
+	
+	public InteractionDB(){
+		url ="jbdc:mysql://94.231.103.7/bennedsen_org_db";
+		username ="bennedsen_org";
+		password ="esigelec";
+	}
+	
+	public void connection(){		
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			connection =	DriverManager.getConnection(url, username, password);
+			DatabaseMetaData dbMetaData = connection.getMetaData();
+			System.out.println("<UL>");
+		}catch(Exception e){
+				System.out.println(e.getMessage());
+		}
+	}
+	
+	public void deconnection(){
+		try{
+			connection.close();
+			System.out.println("plop");
+		}catch(Exception e){
+			System.out.println("plop");
+		}
+	}
+	
+	public void printEntireTable(String tableName){
+		ResultSet resultSet;
+		try{
+			Statement statement = connection.createStatement();
+			String query =
+				"SELECT * FROM " + tableName;
+			resultSet = statement.executeQuery(query);
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+}

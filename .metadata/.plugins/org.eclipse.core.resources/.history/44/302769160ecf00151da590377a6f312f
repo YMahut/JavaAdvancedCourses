@@ -1,0 +1,74 @@
+package Calculator.Calculator.src;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+class Calculator implements ActionListener
+{
+	JFrame f;
+	JButton b1,b2,b3,b4,b5;
+	JTextField t1,t2,t3;
+	JLabel l,l1;
+	Calculator()
+	{
+		f=new JFrame("Calculator");
+		t1=new JTextField("             ");
+		t2=new JTextField("             ");
+		t3=new JTextField("             ");
+		b1=new JButton("Add");
+		b2=new JButton("Sub");
+		b3=new JButton("Mul");
+		b4=new JButton("Div");
+		l=new JLabel();
+		l1=new JLabel();
+	}
+	public void run()
+	{
+		f.setLayout(new GridLayout(3,2));
+		f.setVisible(true);
+		f.add(t1);
+		f.add(t2);
+		f.add(t3);
+		f.add(b1);
+		f.add(b2);
+		f.add(b3);
+		f.add(b4);
+		f.add(l);
+		f.add(l1);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		f.pack();
+	}
+	public void actionPerformed(ActionEvent e)
+	{
+		String s=new String(e.getActionCommand());
+		l.setText(s);
+		String s1 = t1.getText().trim();
+		String s2 = t2.getText().trim();
+		int a = Integer.parseInt(s1);
+		int b = Integer.parseInt(s2);
+		if(e.getSource()==b1)
+		{
+			Integer c=a+b;
+			t3.setText(c.toString());
+
+		}
+		else if((s).equals("Sub")) /*change to test on getSource*/
+		{
+			Integer c=a-b;
+			t3.setText(c.toString());
+
+		}
+		else if((s).equals("Mul"))
+		{
+			Integer c=a*b;
+			t3.setText(c.toString());
+		}
+
+		/* handling of division */
+	}
+
+
+}

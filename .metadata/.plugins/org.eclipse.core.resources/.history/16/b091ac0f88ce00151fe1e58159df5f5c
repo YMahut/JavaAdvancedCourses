@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+
+public class SalesPerson {
+	
+	String name;
+	ArrayList<SalesNote> salesNoteList;
+	public void SalesPerson(){}
+	
+	public void addSalesNote(SalesNote sn){
+		salesNoteList.add(sn);
+	}
+	
+	public void removeSalesNote(SalesNote sn){
+		salesNoteList.remove(sn);
+	}
+	
+	public SalesNote pooreSale(){
+		SalesNote s = new SalesNote();
+		return s;
+	}
+	
+	public int totalSales(){
+		return 0;
+	}
+	
+	public void printSales(){}
+	
+}

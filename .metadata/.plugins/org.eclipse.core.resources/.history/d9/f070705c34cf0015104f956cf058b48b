@@ -1,0 +1,24 @@
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+
+
+public class InteractionDB {
+
+	String url;
+	String username;
+	String password;
+	
+	
+	public void connection(){
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Connection connection =	DriverManager.getConnection(url, username, password);
+			DatabaseMetaData dbMetaData = connection.getMetaData();
+			System.out.println("<UL>");
+		}catch(Exception e){
+				System.out.println(e.getMessage());
+		}
+	}
+}

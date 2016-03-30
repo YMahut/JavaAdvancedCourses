@@ -1,0 +1,12 @@
+
+public class Saleable implements Taxable {
+	
+	String description;
+	int amount;
+	
+	public String getDescription(){
+		return "plop";}
+	public int getAmount(){
+		return 0;}
+
+}

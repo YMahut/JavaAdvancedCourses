@@ -1,0 +1,60 @@
+import java.util.Comparator;
+
+
+public class SalesNote implements Comparable, Taxable {
+	String date;
+	String description;
+	int amount;
+	
+	
+	public SalesNote(String newDate, String newDescription, int newAmount){
+		date = newDate;
+		description = newDescription;
+		amount = newAmount;
+	}
+	public SalesNote(){
+		date = "defaultDate";
+		description = "defaultDescription";
+		amount = 0;
+	}
+	
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	@Override
+	public String toString() {
+		return "SalesNote [date=" + date + ", description=" + description
+				+ ", amount=" + amount + "]";
+	}
+	@Override
+	public int compareTo(SalesNote o) {
+		if (getDate() == null || o.getDate() == null)
+		      return 0;
+		    return getDate().compareTo(o.getDate());
+	}
+
+
+	
+	
+}

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Tour()
+comment1.params=c
+comment1.target=void\ addConcert(Concert)
+comment2.params=
+comment2.target=void\ print()
+comment3.params=i
+comment3.target=java.util.ArrayList\ getBigConcerts(int)
+numComments=4

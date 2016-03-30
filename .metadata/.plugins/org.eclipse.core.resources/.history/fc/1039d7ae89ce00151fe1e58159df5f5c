@@ -1,0 +1,19 @@
+public class Driver{
+    public void Driver(){}
+    
+    static public void test(){
+    
+	    SalesNote sn1 = new SalesNote();
+	    SalesNote sn2 = new SalesNote();
+	    
+	    sn1.toString();
+	    sn2.toString();
+    
+	    
+	    
+	    
+
+
+    }
+
+}
